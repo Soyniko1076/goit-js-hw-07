@@ -21,14 +21,14 @@ function createGalleryItemsMarkup(items) {
     .join('');
 }
 
-function onImgClick(e) {
-  e.preventDefault();
-  if (e.target.nodeName !== "IMG") return;
+function onImgClick(event) {
+ event.preventDefault();
+  if (event.target.nodeName !== "IMG") return;
 
-  const isItemImage = e.target.classList.contains('gallery__image');
+  const isItemImage = event.target.classList.contains('gallery__image');
   if (!isItemImage) return;
 
-  const currentImgUrl = e.target.dataset.source;
+  const currentImgUrl = event.target.dataset.source;
 
   const instance = basicLightbox.create(`<img src="${currentImgUrl}" width="1280" height="auto"/>`,
     {
@@ -42,7 +42,7 @@ function onImgClick(e) {
   );
   instance.show();
 
- function onEscKeyPress(e) {
+ function onEscKeyPress(event) {
     const ESC_KEY_CODE = 'Escape';
     const isEscKey = e.code === ESC_KEY_CODE;
     if (!isEscKey) return;
