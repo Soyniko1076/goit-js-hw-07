@@ -21,7 +21,7 @@ function createGalleryItemsMarkup(items) {
 
 
 const lightbox = new SimpleLightbox('.gallery a', {
-  captionsData: 'alt', captionPosition: 'bottom', captionDelay: 250
+  captionsData: 'alt', captionDelay: 250
 });
 
 
